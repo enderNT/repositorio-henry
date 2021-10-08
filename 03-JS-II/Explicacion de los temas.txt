@@ -1,0 +1,12 @@
+Explicacion de los temas
+Flujos de control, operadores de comparacion y bucles
+
+Un flujo de control es utilizado para estructurar y diseñar un algoritmo; como se desempeñara cada trabajo y que pasos seguira
+
+Operadores de comparacion
+Son utilizados para poder verificar si una oracion es cierta o falsa
+ejemplo: 
+1=2 FALSO
+100>10 CIERTO
+
+Bucles son llamados a aquellos formatos en los que cierta accion o instruccion se repite un numero determinado de veces o infinitas veces
