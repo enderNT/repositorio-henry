@@ -117,7 +117,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-  usuario['amigos'].push(nuevoAmigo)
+  usuario["amigos"].push(nuevoAmigo);
   return usuario;
 }
 
@@ -127,6 +127,10 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  usuarios.forEach((i) => {
+    i.esPremium = true;
+  });
+  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -137,10 +141,15 @@ function sumarLikesDeUsuario(usuario) {
   // Devuelve la suma
   // Tu código:
   //for each
+  suma = 0;
+  usuario.posts.forEach((i) => {
+    suma = suma + i.likes;
+  });
+  return suma;
 }
 
 function agregarMetodoCalculoDescuento(producto) {
-  // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
+  // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento0"
   // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
   // Devuelve el objeto "producto" al final de la función
@@ -149,6 +158,12 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+  producto.calcularPrecioDescuento = function calcularPrecioDescuento() {
+    let precioConDescuento =
+      this.precio - this.precio * this.porcentajeDeDescuento;
+    return precioConDescuento;
+  };
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
